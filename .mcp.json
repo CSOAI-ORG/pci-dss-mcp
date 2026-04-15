@@ -1,0 +1,52 @@
+{
+  "name": "pci-dss-mcp",
+  "description": "PCI DSS payment card industry compliance tools for AI agents. Capabilities: assess 12 requirements, cardholder data flow, network segmentation, vulnerability scans, SAQ generation. Built by MEOK AI Labs.",
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "assess_pci_compliance",
+      "description": "Evaluate against all 12 PCI DSS 4.0 requirements",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "check_cardholder_data",
+      "description": "Analyze cardholder data flow for compliance",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "network_segmentation_check",
+      "description": "Check network segmentation for scope reduction",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "vulnerability_scan_check",
+      "description": "Evaluate vulnerability scanning per ASV requirements",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "generate_saq",
+      "description": "Generate a PCI DSS Self-Assessment Questionnaire template",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
+}

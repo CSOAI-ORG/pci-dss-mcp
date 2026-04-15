@@ -1,0 +1,57 @@
+{
+  "name": "PCI DSS Compliance",
+  "description": "By MEOK AI Labs -- Automates PCI DSS 4.0 payment card compliance. Assess all 12 requirements, analyze cardholder data flows, check network segmentation, evaluate vulnerability scanning, and generate SAQs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/pci-dss-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "10 calls/day"
+  },
+  "tools": [
+    {
+      "name": "assess_pci_compliance",
+      "description": "Evaluate against all 12 PCI DSS 4.0 requirements"
+    },
+    {
+      "name": "check_cardholder_data",
+      "description": "Analyze cardholder data flow for compliance"
+    },
+    {
+      "name": "network_segmentation_check",
+      "description": "Check network segmentation for scope reduction"
+    },
+    {
+      "name": "vulnerability_scan_check",
+      "description": "Evaluate vulnerability scanning per ASV requirements"
+    },
+    {
+      "name": "generate_saq",
+      "description": "Generate a PCI DSS Self-Assessment Questionnaire template"
+    }
+  ],
+  "categories": [
+    "Finance",
+    "Security & Compliance"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 10
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
