@@ -143,6 +143,24 @@ def assess_pci_compliance(
     When NOT to use:
         Do not use as a substitute for qualified legal counsel. This tool
         provides technical compliance guidance, not legal advice.
+
+    Args:
+        organization_name (str): The organization name to analyze or process.
+        merchant_level (int): The merchant level to analyze or process.
+        has_firewall (bool): The has firewall to analyze or process.
+        has_secure_config (bool): The has secure config to analyze or process.
+        has_data_protection (bool): The has data protection to analyze or process.
+        has_encryption_transit (bool): The has encryption transit to analyze or process.
+        has_anti_malware (bool): The has anti malware to analyze or process.
+        has_secure_sdlc (bool): The has secure sdlc to analyze or process.
+        has_access_control (bool): The has access control to analyze or process.
+        has_strong_auth (bool): The has strong auth to analyze or process.
+        has_physical_security (bool): The has physical security to analyze or process.
+        has_logging (bool): The has logging to analyze or process.
+        has_security_testing (bool): The has security testing to analyze or process.
+        has_security_policy (bool): The has security policy to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -227,6 +245,18 @@ def check_cardholder_data(
     When NOT to use:
         Do not use as a substitute for qualified legal counsel. This tool
         provides technical compliance guidance, not legal advice.
+
+    Args:
+        data_flow_description (str): The data flow description to analyze or process.
+        stores_pan (bool): The stores pan to analyze or process.
+        stores_cvv (bool): The stores cvv to analyze or process.
+        stores_pin (bool): The stores pin to analyze or process.
+        stores_track_data (bool): The stores track data to analyze or process.
+        pan_encrypted (bool): The pan encrypted to analyze or process.
+        pan_truncated (bool): The pan truncated to analyze or process.
+        tokenization_used (bool): The tokenization used to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -311,6 +341,16 @@ def network_segmentation_check(
     When NOT to use:
         Do not use as a substitute for qualified legal counsel. This tool
         provides technical compliance guidance, not legal advice.
+
+    Args:
+        has_segmentation (bool): The has segmentation to analyze or process.
+        cde_isolated (bool): The cde isolated to analyze or process.
+        segmentation_tested (bool): The segmentation tested to analyze or process.
+        firewall_between_zones (bool): The firewall between zones to analyze or process.
+        wireless_isolated (bool): The wireless isolated to analyze or process.
+        third_party_isolated (bool): The third party isolated to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -391,6 +431,17 @@ def vulnerability_scan_check(
     When NOT to use:
         Do not use as a substitute for qualified legal counsel. This tool
         provides technical compliance guidance, not legal advice.
+
+    Args:
+        last_external_scan_date (str): The last external scan date to analyze or process.
+        last_internal_scan_date (str): The last internal scan date to analyze or process.
+        external_scan_passed (bool): The external scan passed to analyze or process.
+        internal_scan_passed (bool): The internal scan passed to analyze or process.
+        asv_vendor (str): The asv vendor to analyze or process.
+        quarterly_scans (bool): The quarterly scans to analyze or process.
+        scan_after_changes (bool): The scan after changes to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -485,6 +536,12 @@ def generate_saq(
     When NOT to use:
         Do not use as a substitute for qualified legal counsel. This tool
         provides technical compliance guidance, not legal advice.
+
+    Args:
+        organization_name (str): The organization name to analyze or process.
+        saq_type (str): The saq type to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
