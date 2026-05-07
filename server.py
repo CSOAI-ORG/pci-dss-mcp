@@ -126,7 +126,24 @@ def assess_pci_compliance(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Evaluate an organization against all 12 PCI DSS 4.0 requirements."""
+    """Evaluate an organization against all 12 PCI DSS 4.0 requirements.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
@@ -179,7 +196,24 @@ def check_cardholder_data(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Analyze cardholder data flow for PCI DSS compliance."""
+    """Analyze cardholder data flow for PCI DSS compliance.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
@@ -232,7 +266,24 @@ def network_segmentation_check(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Check network segmentation for PCI DSS scope reduction."""
+    """Check network segmentation for PCI DSS scope reduction.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
@@ -281,7 +332,24 @@ def vulnerability_scan_check(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Evaluate vulnerability scanning compliance per PCI DSS ASV requirements."""
+    """Evaluate vulnerability scanning compliance per PCI DSS ASV requirements.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
@@ -345,7 +413,23 @@ def generate_saq(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Generate a PCI DSS Self-Assessment Questionnaire template."""
+    """Generate a PCI DSS Self-Assessment Questionnaire template.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
