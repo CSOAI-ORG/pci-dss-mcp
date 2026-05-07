@@ -1,3 +1,5 @@
+[![pci-dss-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/pci-dss-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/pci-dss-mcp)
+
 <div align="center">
 
 [![PyPI](https://img.shields.io/pypi/v/pci-dss-mcp)](https://pypi.org/project/pci-dss-mcp/)
