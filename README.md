@@ -1,3 +1,7 @@
+[![pci-dss-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/pci-dss-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/pci-dss-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/pci-dss-mcp)](https://pypi.org/project/pci-dss-mcp/)
+
 [![pci-dss-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/pci-dss-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/pci-dss-mcp)
 
 <div align="center">
