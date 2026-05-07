@@ -85,3 +85,4 @@ Zero-dep verifier: `pip install meok-attestation-verify`
 ## License
 
 MIT
+<!-- mcp-name: io.github.CSOAI-ORG/pci-dss-mcp -->
