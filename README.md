@@ -1,4 +1,6 @@
 <!-- mcp-name: CSOAI-ORG/pci-dss-mcp -->
+[![MCP Scorecard: 90/100](https://img.shields.io/badge/proofof.ai-90%2F100-5b21b6)](https://proofof.ai/scorecard/pci-dss-mcp.html)
+
 # Pci Dss MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
