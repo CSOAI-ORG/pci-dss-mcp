@@ -1,0 +1,9 @@
+# pci-dss-mcp - Auto-trigger Rules
+
+When the user asks about pci dss, use pci-dss-mcp tools: assess_pci_compliance, check_cardholder_data, network_segmentation_check, vulnerability_scan_check, generate_saq
+
+**MCP server for pci dss mcp operations**
+
+Install: `pip install pci-dss-mcp`
+
+By MEOK AI Labs — MIT licensed.

@@ -1,0 +1,36 @@
+# pci-dss-mcp
+# **MCP server for pci dss mcp operations**
+
+## Install
+```bash
+pip install pci-dss-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `assess_pci_compliance`
+Tool: assess_pci_compliance
+
+### `check_cardholder_data`
+Analyze cardholder data flow for PCI DSS compliance.
+
+### `network_segmentation_check`
+Check network segmentation for PCI DSS scope reduction.
+
+### `vulnerability_scan_check`
+Evaluate vulnerability scanning compliance per PCI DSS ASV requirements.
+
+### `generate_saq`
+Generate a PCI DSS Self-Assessment Questionnaire template.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

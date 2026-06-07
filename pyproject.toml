@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pci-dss-mcp"
-version = "1.0.4"
+version = "1.0.8"
 readme = "README.md"
 description = "PCI DSS payment card industry compliance tools for AI agents. Capabilities: assess 12 requirements, cardholder data flow, network segmentation, vulnerability scans, SAQ generation. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -25,7 +25,7 @@ Repository = "https://github.com/CSOAI-ORG/pci-dss-mcp"
 
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 pci_dss_mcp = "server:main"
