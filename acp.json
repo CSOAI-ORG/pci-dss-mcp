@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "pci-dss-mcp",
+    "description": "Pci Dss MCP Server by MEOK AI Labs",
+    "version": "1.0.8",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "pci-dss-mcp"
+      }
+    ],
+    "capabilities": [
+      "assess_pci_compliance",
+      "check_cardholder_data",
+      "network_segmentation_check",
+      "vulnerability_scan_check",
+      "generate_saq"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "pci-dss-mcp",
+  "description": "Pci Dss MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/pci-dss-mcp.html",
+  "version": "1.0.8",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "assess_pci_compliance",
+      "name": "Assess Pci Compliance",
+      "description": "assess_pci_compliance via pci-dss-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_cardholder_data",
+      "name": "Check Cardholder Data",
+      "description": "check_cardholder_data via pci-dss-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "network_segmentation_check",
+      "name": "Network Segmentation Check",
+      "description": "network_segmentation_check via pci-dss-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "vulnerability_scan_check",
+      "name": "Vulnerability Scan Check",
+      "description": "vulnerability_scan_check via pci-dss-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_saq",
+      "name": "Generate Saq",
+      "description": "generate_saq via pci-dss-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
