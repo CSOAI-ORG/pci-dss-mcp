@@ -33,11 +33,18 @@ def _check_auth(api_key: str = "") -> str | None:
 
 
 # ── Rate limiting ───────────────────────────────────────────────
-FREE_DAILY_LIMIT = 10
+FREE_DAILY_LIMIT = 50
 _usage: dict[str, list[datetime]] = defaultdict(list)
 
 
 def _rl(caller: str = "anonymous", tier: str = "free") -> Optional[str]:
+    # 2026-06-12 PM22: wire /verify call site (fail-open)
+    try:
+        _meter = _server_meter_check("pci_dss")
+        if not _meter.get("allowed", True):
+            return "Free tier limit reached. Upgrade to Pro at https://meok.ai/mcp/pci-dss/pro"
+    except Exception:
+        pass  # fail-open
     if tier == "pro":
         return None
     now = datetime.now()
@@ -603,10 +610,34 @@ if __name__ == "__main__":
     main()
 
 
+# ── 2026-06-12 PM22: server-side metering via live /verify (fail-open) ──
+import urllib.request as _meter_urlreq
+import urllib.error as _meter_urlerr
+import json as _meter_json
+import os as _meter_os
+_MEOK_API_KEY_PCI = _meter_os.environ.get("MEOK_API_KEY", "") or _MEOK_API_KEY  # fall back to existing module-level
+_METER_URL = _meter_os.environ.get("MEOK_VERIFY_URL", "https://meok-attestation-api.vercel.app/verify")
+
+
+def _server_meter_check(tool: str) -> dict:
+    """POST {api_key, tool} to /verify. Returns metering dict. Fail-open."""
+    if not _MEOK_API_KEY_PCI:
+        return {"allowed": True, "tier": "anon", "note": "MEOK_API_KEY not set; metering skipped"}
+    try:
+        body = _meter_json.dumps({"api_key": _MEOK_API_KEY_PCI, "tool": tool}).encode()
+        req = _meter_urlreq.Request(_METER_URL, data=body,
+            headers={"Content-Type": "application/json"}, method="POST")
+        with _meter_urlreq.urlopen(req, timeout=4) as r:
+            return _meter_json.loads(r.read())
+    except (_meter_urlerr.URLError, _meter_urlerr.HTTPError, TimeoutError, ValueError) as e:
+        # Fail-open: never break the tool on a metering failure
+        return {"allowed": True, "tier": "unknown", "note": f"metering failed (fail-open): {e}"}
+
+
 # ── MEOK monetization layer (Stripe upgrade · PAYG · pricing) ──────────
 # Free tier is zero-config. Upgrade to Pro (unlimited) or pay-as-you-go per call.
 import os as _meok_os
-MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/5kQ6oJ0xS3ce8sl7ew8k91j"  # Pro (unlimited)
+MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"  # Pro (unlimited)
 MEOK_PAYG_KEY = _meok_os.environ.get("MEOK_PAYG_KEY", "")  # set to enable PAYG (x402 / ~GBP0.05 per call)
 MEOK_PRICING = "https://meok.ai/pricing"
 

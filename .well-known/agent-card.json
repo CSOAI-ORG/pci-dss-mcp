@@ -1,0 +1,112 @@
+{
+  "name": "Pci Dss Mcp",
+  "version": "1.0.8",
+  "url": "https://mcp.meok.ai/pci-dss-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "PCI DSS payment card industry compliance tools for AI agents. Capabilities: assess 12 requirements, cardholder data flow, network segmentation, vulnerability scans, SAQ generation. Built by MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "assess_pci_compliance",
+      "name": "Assess Pci Compliance",
+      "description": "Assess Pci Compliance — a tool of the pci-dss-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_cardholder_data",
+      "name": "Check Cardholder Data",
+      "description": "Check Cardholder Data — a tool of the pci-dss-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "network_segmentation_check",
+      "name": "Network Segmentation Check",
+      "description": "Network Segmentation Check — a tool of the pci-dss-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "vulnerability_scan_check",
+      "name": "Vulnerability Scan Check",
+      "description": "Vulnerability Scan Check — a tool of the pci-dss-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "generate_saq",
+      "name": "Generate Saq",
+      "description": "Generate Saq — a tool of the pci-dss-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "pci-dss-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
