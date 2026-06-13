@@ -4,3 +4,6 @@ __pycache__/.!11187!server.cpython-311.pyc
 __pycache__/auth_middleware.cpython-311.pyc
 __pycache__/server.cpython-314.pyc
 dist/
+
+# Auto-added during alignment sweep
+*.pyc

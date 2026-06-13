@@ -4,9 +4,8 @@
   "version": "1.0.10",
   "description": "Pci Dss MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/pci-dss-mcp",
-    "source": "https://github.com/CSOAI-ORG/pci-dss-mcp"
+    "source": "github"
   },
   "packages": [
     {
